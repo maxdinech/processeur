@@ -1,0 +1,13 @@
+ast.cmo :
+ast.cmx :
+compiler.cmo : ast.cmo
+compiler.cmx : ast.cmx
+lexer.cmo : parser.cmi
+lexer.cmx : parser.cmx
+main.cmo : typer.cmo parser.cmi lexer.cmo compiler.cmo
+main.cmx : typer.cmx parser.cmx lexer.cmx compiler.cmx
+parser.cmo : ast.cmo parser.cmi
+parser.cmx : ast.cmx parser.cmi
+parser.cmi : ast.cmo
+typer.cmo : ast.cmo
+typer.cmx : ast.cmx
